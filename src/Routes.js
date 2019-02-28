@@ -14,7 +14,7 @@ const Preview = asyncImport(import("./components/prismic/preview"))
 
 /* Use components to define routes */
 export default ({layout}) =>
-  <Router>
+  <Router onUpdate={() => window.scrollTo(0, 0)}>
     <Switch>
       <Layout layout={layout} path="/" exact component={Home} />
       <Layout layout={layout} path="/products" exact component={Products} />
